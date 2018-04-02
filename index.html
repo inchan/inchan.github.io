@@ -1,6 +1,49 @@
-Hello World
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<script>
+
+	window.onload = function(){
+
+		document.getElementById("uploadForm").onsubmit = function(){
+
+			document.getElementById("uploadForm").target = "uploadIFrame";
+
+		}
+
+		document.getElementById("uploadIFrame").onload = function()
+
+		{
+
+			alert("파일 업로드 완료!");
+
+		}
+
+	}
+
+</script>
+
+</head>
+
+<body>
+
+	<form id="uploadForm" method="post" enctype="multipart/form-data" action="upload.php">
+
+		<input name="uploadFile" id="uploadFile" type="file" />
+
+		<input type="submit" name="action" value="Upload" />
+
+		<iframe id="uploadIFrame" name="uploadIFrame" style="display:none;visibility:hidden"></iframe>
+
+	</form>
+
+</body>
+
+</html>
 
 
-asldfkjaslfjdlasjflkaslkdflkasjflasjflasjdlfkjsalkf
 
-<Html> <body> a123123123 </body></Html>
+출처: http://unikys.tistory.com/247 [All-round programmer]
